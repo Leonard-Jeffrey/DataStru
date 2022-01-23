@@ -4,7 +4,8 @@
 
 
 # 排序算法1-选择排序
-def SelectSorting(array):
+# 时间复杂度：n + n-1 + n-2 + ... + 1 = n(n + 1)/2 = O(n^2 + n/2) = O(n^2)
+def SelectSort(array):
     array2 = []
     length = len(array)
     for j in range(0, length):
@@ -16,8 +17,21 @@ def SelectSorting(array):
         array.remove(flag)
     return array2
 
-array=[1,3,6,6,6,6,6]
-array2=SelectSorting(array)
-#print(array2)
 
-#排序算法2-快速排序
+
+# 排序算法2-快速排序
+# 时间复杂度：O(n logn)
+def QuickSort(array):
+    if len(array) <2:
+        return array
+    else:
+        base = array[0]
+        less = [i for i in array[1:] if i <= base]
+        greater = [i for i in array[1:] if i > base]
+        return QuickSort(less) + [base] + QuickSort(greater)
+
+
+# 测试用例
+array=[35,14,33,66,34,678,3768]
+array2=QuickSort(array)
+print(array2)
