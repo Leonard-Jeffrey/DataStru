@@ -1,6 +1,8 @@
 #排序大集合：
 # 1-选择排序
 # 2-快速排序
+# 3-归并排序
+# 4-
 
 
 # 排序算法1-选择排序
@@ -17,8 +19,6 @@ def SelectSort(array):
         array.remove(flag)
     return array2
 
-
-
 # 排序算法2-快速排序
 # 时间复杂度：O(n logn)
 def QuickSort(array):
@@ -29,6 +29,8 @@ def QuickSort(array):
         less = [i for i in array[1:] if i <= base]
         greater = [i for i in array[1:] if i > base]
         return QuickSort(less) + [base] + QuickSort(greater)
+
+# 3-归并排序
 
 
 # 测试用例
