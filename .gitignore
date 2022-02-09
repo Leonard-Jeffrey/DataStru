@@ -1,0 +1,6 @@
+C/Sort/.vs/*
+C/Sort/x64/*
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
