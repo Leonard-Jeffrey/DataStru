@@ -6,7 +6,7 @@ void Swap(int *a, int* b) {
 	*b = temp;
 }
 
-void MaxHeapity(int A[], int s, int e) {
+void Maxmum(int A[], int s, int e) {
 	int father = s;
 	int son = 2 * father + 1;
 	if (son <= e) {
@@ -20,7 +20,7 @@ void MaxHeapity(int A[], int s, int e) {
 int* HeapSort(int A[], int len) {
 	if (len > 1) {
 		for (int i = len / 2 - 1; i >= 0; i--) {
-			MaxHeapity(A, i, len - 1);
+			Maxmum(A, i, len - 1);
 		}
 		Swap(&A[0], &A[len - 1]);
 		HeapSort(A, len - 1);
