@@ -5,7 +5,7 @@ int* QuickSort(int d[], int left, int right) {
 	if (len < 2)
 		return d;
 	int cpy_l = left, cpy_r = right;
-	int temp = d[left];
+	int pivot = d[left];
 	while (left < right) {
 		while (left < right && temp < d[right])
 			right--;
@@ -14,7 +14,7 @@ int* QuickSort(int d[], int left, int right) {
 			left++;
 		d[right] = d[left];
 	}
-	d[left] = temp;
+	d[left] = pivot;
 	int pos = left;
 	QuickSort(d, cpy_l, pos-1);
 	QuickSort(d, pos + 1, cpy_r);
