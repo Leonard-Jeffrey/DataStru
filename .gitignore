@@ -1,5 +1,6 @@
-C/Sort/.vs/*
-C/Sort/x64/*
+.vs/
+x64/
+Debug/
 *.sln
 *.vcxproj
 *.vcxproj.filters
