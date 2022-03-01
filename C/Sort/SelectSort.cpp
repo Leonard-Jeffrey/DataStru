@@ -1,20 +1,24 @@
 #include"Sort.h"
+void swap(int *a, int *b){
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
 
 int* SelectSort(int d[], int len) {
-	int i, j, min, temp;
 	//int len = sizeof(d) / sizeof(d[0]);
 	if (len < 2)
 		return d;
-	for (i = 0; i < len - 1;i++) {
-		min = i;
+	for (int i = 0; i < len - 1;i++) {
+		int min = i;
 		for (j = i + 1; j < len; j++) {
 			if (d[min] > d[j])
 				min = j;
 		}
-		//Swap(d[temp],d[i])
-		temp = d[min];
-		d[min] = d[i];
-		d[i] = temp;
+		
+		if(min != i){
+			swap(&d[min],&d[i]);
+		}
 	}
 	return d;
 }
