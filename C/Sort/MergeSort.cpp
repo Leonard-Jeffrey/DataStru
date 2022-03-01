@@ -18,7 +18,7 @@ void Merge(int *A, int s1, int e1, int s2, int e2) {
 		A[s1 + i] = temp[i];
 	}
 }
-//�ǵݹ�
+//一般实现
 int* MergeSort(int A[], int len) {
 	for (int i = 2; i/2 < len; i *= 2) {
 		for (int j = 0; j < len; j += i) {
@@ -29,7 +29,7 @@ int* MergeSort(int A[], int len) {
 	return A;
 }
 
-//�ݹ�
+//递归实现
 int* MergeSortR(int A[], int left, int right) {
 	if (left < right) {
 		int mid = (left + right) / 2;
